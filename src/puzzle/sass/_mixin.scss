@@ -1,0 +1,9 @@
+@use 'variable' as var;
+
+@mixin box-color() {
+  @each $name, $color in zip(var.$classNames, var.$buttonColor) {
+    &.#{$name} {
+      background-color: $color;
+    }
+  }
+}
